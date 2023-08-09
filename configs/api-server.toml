@@ -2,3 +2,4 @@ bind_addr=":8080"
 log_level="debug"
 
 database_url="host=localhost dbname=postgres sslmode=disable"
+session_key="fjaefaef242blabdla"

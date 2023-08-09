@@ -4,7 +4,11 @@ go 1.20
 
 require github.com/sirupsen/logrus v1.9.3
 
-require github.com/asaskevich/govalidator v0.0.0-20200108200545-475eaeb16496 // indirect
+require (
+	github.com/asaskevich/govalidator v0.0.0-20200108200545-475eaeb16496 // indirect
+	github.com/gorilla/securecookie v1.1.1 // indirect
+	github.com/gorilla/sessions v1.2.1 // indirect
+)
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect
