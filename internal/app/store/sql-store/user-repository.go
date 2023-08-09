@@ -24,7 +24,7 @@ func (ur *UserRepository) Create(u *model.User) error {
 		"INSERT INTO users (email, encrypted_password) VALUES ($1, $2) RETURNING id",
 		u.Email, u.EncryptedPassword,
 	).Scan(&u.ID); err != nil {
-		return err
+		return store.ErrEmailIsTaken
 	}
 	return nil
 }
