@@ -19,14 +19,13 @@ func init() {
 func main() {
 	flag.Parse()
 
-	config := apiserver.NewConfig()
-	_, err := toml.DecodeFile(configPath, config)
+	c := apiserver.NewConfig()
+	_, err := toml.DecodeFile(configPath, c)
 	if err != nil {
 		log.Fatal(err)
 	}
-	
-	s := apiserver.New(config)
-	if err := s.Start(); err != nil {
+
+	if err := apiserver.Start(c); err != nil {
 		log.Fatal(err)
 	}
 }
